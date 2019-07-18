@@ -1,0 +1,31 @@
+# This file contains Ambari roles and the list of groups for each role in the format:
+# [[ROLE]]
+# group1
+# group2
+# ....
+# groupN
+
+# Below group will be ignored as its not below a valid role
+some_invalid_grp
+
+[[CLUSTER.ADMINISTRATOR]]
+admin_grp
+
+[[CLUSTER.OPERATOR]]
+
+[[SERVICE.ADMINISTRATOR]]
+service_admin_grp
+
+[[SERVICE.OPERATOR]]
+# unknown group below should fail as there the group does not exist
+unknown
+
+# All the groups under SOME.ROLE will be ignored as SOME.ROLE is not a valid role
+[[SOME.ROLE]]
+admin_grp
+another_grp
+
+[[CLUSTER.USER]]
+cluster_user_grp
+
+

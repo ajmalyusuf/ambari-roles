@@ -1,0 +1,34 @@
+# This file contains Ambari roles and the list of users for each role in the format:
+# All lines starting with # are comments and will be ignored
+# [[ROLE]]
+# user1
+# user2
+# ....
+# userN
+
+# Below user will be ignored as its not associated (below) with a valid role
+some_user
+
+[[CLUSTER.ADMINISTRATOR]]
+vinodb
+mark
+
+[[CLUSTER.OPERATOR]]
+
+[[SERVICE.ADMINISTRATOR]]
+ajmal
+admin
+
+[[SERVICE.OPERATOR]]
+
+# All the users under SOME.ROLE will be ignored as SOME.ROLE is not a valid role
+[[SOME.ROLE]]
+mark
+mike
+ayusuf
+
+[[CLUSTER.USER]]
+# unknown user below should fail as there the user does not exist
+unknown
+
+
